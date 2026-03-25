@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-function App() {
+/*function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -119,3 +119,49 @@ function App() {
 }
 
 export default App
+*/
+
+function App() {
+  // Inicializamos el contador en 0
+  const [count, setCount] = useState(0);
+
+  // Función para incrementar
+  const handleIncrement = () => {
+    if (count >= 10) {
+      // Si el contador es 10 o más, mostramos la alerta y no hacemos nada más
+      alert("¡Llegaste al límite! El contador no puede ser mayor a 10.");
+    } else {
+      // Si es menor a 10, sumamos 1
+      setCount(count + 1);
+    }
+  };
+
+  // Función para decrementar
+  const handleDecrement = () => {
+    if (count > 0) {
+      // Solo restamos 1 si el contador es estrictamente mayor a 0
+      setCount(count - 1);
+    }
+    // No pusimos alerta aquí porque no la pediste, simplemente no hace nada si ya es 0
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>Contador: {count}</h1>
+      
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+        {/* Botón de incrementar original, ahora usa nuestra nueva función */}
+        <button onClick={handleIncrement}>
+          Incrementar
+        </button>
+
+        {/* Nuevo botón para decrementar */}
+        <button onClick={handleDecrement}>
+          Decrementar
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
