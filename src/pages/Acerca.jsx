@@ -1,4 +1,4 @@
-import miFoto from '../assets/Foto_Perfil.jpg';
+import miFoto from './assets/Foto_Perfil.jpg';
 
 function Acerca() {
   return (
