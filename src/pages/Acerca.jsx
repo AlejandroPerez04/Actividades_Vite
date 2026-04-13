@@ -1,3 +1,5 @@
+import miFoto from '../assets/Foto_Perfil.jpg';
+
 function Acerca() {
   return (
     <div>
@@ -22,10 +24,11 @@ function Acerca() {
         <li>React</li>
       </ul>
 
-      <img
-        src="https://via.placeholder.com/150"
-        alt="Foto de perfil"
-      />
+      <img 
+  src={miFoto} 
+  alt="Foto de perfil de Alejandro" 
+  width="150" 
+/>
     </div>
   );
 }
