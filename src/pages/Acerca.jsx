@@ -1,4 +1,4 @@
-import miFoto from "../assets/Foto_Perfil.jpg";
+import miFoto from "../assets/Foto_Perfil.JPEG";
 
 function Acerca() {
   return (
@@ -7,6 +7,11 @@ function Acerca() {
 
       <p><strong>Nombre:</strong> Alejandro Daniel Perez Avila</p>
       <p><strong>Carrera:</strong> Ingeniería en Sistemas</p>
+      <img 
+  src={miFoto} 
+  alt="Foto de perfil de Alejandro" 
+  width="150" 
+/>
 
       <p>
         Soy estudiante interesado en el desarrollo web. 
@@ -24,11 +29,7 @@ function Acerca() {
         <li>React</li>
       </ul>
 
-      <img 
-  src={miFoto} 
-  alt="Foto de perfil de Alejandro" 
-  width="150" 
-/>
+      
     </div>
   );
 }
