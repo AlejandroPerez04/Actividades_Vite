@@ -176,7 +176,7 @@ function BasicTable() {
 }
 
 // --- COMPONENTE PRINCIPAL (APP) ---
-function App() {
+function Tablas() {
   // Estado del contador
   const [count, setCount] = useState(0);
 
@@ -226,5 +226,5 @@ function App() {
 }
 
 // Única exportación al final del archivo
-export default App;
+export default Tablas;
 
