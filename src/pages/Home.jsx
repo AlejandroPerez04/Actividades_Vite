@@ -10,18 +10,9 @@ function Home() {
         <li>Mi informacion de Contacto</li>
         <li>Mi Portafolio de Actividades</li>
       </ul>
-    </div>
-  );
-}
-
-
-function Home() {
-  return (
-    <div>
-      <h1>Inicio</h1>
       <PerfilResumen />
     </div>
   );
 }
 
-export default Home;  
+export default Home;
