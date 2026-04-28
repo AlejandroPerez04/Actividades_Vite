@@ -6,6 +6,7 @@ import Tablas from "./pages/Tablas";
 import Navbar from "./components/Navbar";
 import Usuarios from "./pages/Usuarios";
 import Mapa from "./pages/Mapa";
+import RutaGoogleMaps from "./pages/RutaGoogleMaps";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
   <Route path="/tablas" element={<Tablas />} />
   <Route path="/usuarios" element={<Usuarios />} />
   <Route path="/mapa" element={<Mapa />} />
+  <Route path="/ruta-google-maps" element={<RutaGoogleMaps />} />
 </Routes>
     </>
   );

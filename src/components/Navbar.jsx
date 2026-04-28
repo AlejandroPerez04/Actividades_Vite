@@ -9,6 +9,7 @@ function Navbar() {
   <Link to="/tablas">Tablas</Link> |{" "}
   <Link to="/usuarios">Usuarios API</Link>
   <Link to="/mapa">Mapa</Link>
+  <Link to="/ruta-google-maps">Ruta FIMAZ</Link>
 </nav>
   );
 }
