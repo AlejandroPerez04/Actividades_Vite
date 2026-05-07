@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { GoogleMap, Marker, DirectionsRenderer, useJsApiLoader } from "@react-google-maps/api";
 
+// 1. La constante de librerías va afuera
+const libraries = ["drawing"];
+
 // Coordenadas de FIMAZ
 const origen = {
   lat: 23.2446,
@@ -21,13 +24,14 @@ const containerStyle = {
 export default function RutaGoogleMaps() {
   const [directions, setDirections] = useState(null);
 
+  // 2. Aquí llamamos al loader con las librerías
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    libraries: libraries 
   });
 
   const calcularRuta = () => {
-    // Servicio de rutas de Google
     const directionsService = new window.google.maps.DirectionsService();
 
     directionsService.route(
@@ -68,9 +72,8 @@ export default function RutaGoogleMaps() {
         <Marker position={origen} label="FIMAZ" />
         <Marker position={destino} label="Machado" />
         
-        {/* Render de la ruta */}
         {directions && <DirectionsRenderer directions={directions} />}
       </GoogleMap>
     </div>
   );
-}
+} // <- Esta es la llave que faltaba

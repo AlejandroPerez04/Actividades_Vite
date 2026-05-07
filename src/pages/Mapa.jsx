@@ -1,6 +1,9 @@
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api';
 import { useState } from 'react';
 
+// 1. La constante de librerías va afuera
+const libraries = ["drawing"];
+
 const containerStyle = {
   width: '100%',
   height: '400px'
@@ -14,10 +17,11 @@ const center = {
 function Mapa() {
   const [mostrarInfo, setMostrarInfo] = useState(false);
 
-  // Usamos el mismo cargador moderno que en tu otra práctica
+  // 2. Aquí llamamos al loader con las librerías
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    libraries: libraries 
   });
 
   if (!isLoaded) return <p>Cargando mapa...</p>;
@@ -44,6 +48,6 @@ function Mapa() {
       </GoogleMap>
     </div>
   );
-}
+} // <- Esta era la llave que se había borrado
 
 export default Mapa;
