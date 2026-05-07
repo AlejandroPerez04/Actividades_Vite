@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Usuarios from "./pages/Usuarios";
 import Mapa from "./pages/Mapa";
 import RutaGoogleMaps from "./pages/RutaGoogleMaps";
+import DrawingMap from "./pages/DrawingMap";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
   <Route path="/usuarios" element={<Usuarios />} />
   <Route path="/mapa" element={<Mapa />} />
   <Route path="/ruta-google-maps" element={<RutaGoogleMaps />} />
+  <Route path="/dibujar" element={<DrawingMap />} />
 </Routes>
     </>
   );

@@ -10,6 +10,7 @@ function Navbar() {
   <Link to="/usuarios">Usuarios API</Link>
   <Link to="/mapa">Mapa</Link>
   <Link to="/ruta-google-maps">Ruta FIMAZ</Link>
+  <Link to="/dibujar">Dibujar Mapa</Link>
 </nav>
   );
 }
